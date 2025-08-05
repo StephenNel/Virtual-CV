@@ -4,12 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Nel | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Stephen Nel</h1>
-    <p>Software Developer | Game Dev Enthusiast</p>
+    <p class="typing-text" id="subtitle"></p>
     <nav>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
@@ -19,62 +29,71 @@
     </nav>
   </header>
 
-  <section id="about">
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I am a dedicated and goal-oriented finale year BSc Information Technology student at NorthWest University, driven by a passion for innovation and a desire to make a positive impact
-through technology. Throughout my academic career, I have demonstrated a consistent
-commitment to excellence, earning multiple academic awards, leadership positions, and
-recognition for my contributions to both school and community life.</p>
-
-<p>My ambition is to become a skilled software engineer who not only delivers high-quality
-solutions but also contributes meaningfully to the world. I value companies that prioritize
-sustainability, social development, and ethical decision-making alongside business success. I
-thrive in challenging environments and am excited by opportunities that require creativity,
-resilience, and continuous growth.</p>
+    <p>
+      I am a dedicated and goal-oriented final-year BSc Information Technology student at NorthWest University, driven by a passion for innovation and a desire to make a positive impact through technology.
+    </p>
+    <p>
+      My ambition is to become a skilled software engineer who not only delivers high-quality solutions but also contributes meaningfully to the world. I thrive in challenging environments and am excited by opportunities that require creativity, resilience, and continuous growth.
+    </p>
   </section>
 
-  <section id="resume">
+  <!-- Resume Section -->
+  <section id="resume" data-aos="fade-up" data-aos-delay="100">
     <h2>Resume / CV</h2>
-    <p><a href="assets/Stephen Nel (Jnr)  - CV.pdf" target="_blank">Download My CV (PDF)</a></p>
+    <a class="btn" href="assets/Stephen Nel (Jnr)  - CV.pdf" target="_blank" rel="noopener noreferrer">Download My CV (PDF)</a>
   </section>
 
-  <section id="projects">
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up" data-aos-delay="200">
     <h2>Projects</h2>
     <ul>
       <li>
-        <strong>Bit Brawler</strong> – A 2D arcade-style fighter.  
-        <a href="https://duimpie22.itch.io/bit-brawler" target="_blank">Itch.io download</a>
+        <strong>Bit Brawler</strong> – A 2D arcade-style fighter.<br />
+        <a href="https://duimpie22.itch.io/bit-brawler" target="_blank">Itch.io</a>
       </li>
       <li>
-        <strong>Task Management System</strong> – Custom-built data structures in C#.  
+        <strong>Task Management System</strong> – Custom-built data structures in C#.<br />
         <a href="https://github.com/Hotel-Management-System-Group-22/CMPG223_Group22.git" target="_blank">GitHub Repo</a>
       </li>
       <li>
-        <strong>Text Messaging app</strong> – Custom-built text messaging app with server in C#.  
+        <strong>Text Messaging App</strong> – A custom C# app with networking.<br />
         <a href="https://github.com/Pappa-Padda/CMPG-315-Groep-17.git" target="_blank">GitHub Repo</a>
       </li>
-
     </ul>
   </section>
 
-  <section id="skills">
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up" data-aos-delay="300">
     <h2>Skills</h2>
     <ul>
-      <li>C#, .NET , Python, Java, C++</li>
-      <li>HTML, CSS, JavaScript , Assemble, SQL</li>
-      <li>SQL, GitHub, Visual Studio </li>
-      <li> Unity, Oracle, MATLAB</li>
+      <li>C#, .NET, Python, Java, C++</li>
+      <li>HTML, CSS, JavaScript, Assembly, SQL</li>
+      <li>GitHub, Visual Studio, Oracle</li>
+      <li>Unity, MATLAB</li>
     </ul>
   </section>
 
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up" data-aos-delay="400">
     <h2>Contact</h2>
-    <p><strong>Email: </strong>stephennel321@gmail.com</p>
-    <p><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/stephen-nel-976962342/" target="_blank">my-profile</a></p>
+    <p><strong>Email:</strong> stephennel321@gmail.com</p>
+    <p><strong>LinkedIn:</strong></p>
+    <a class="linkedin-btn" href="https://www.linkedin.com/in/stephen-nel-976962342/" target="_blank">
+      Click here to view my LinkedIn
+    </a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Stephen Nel. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

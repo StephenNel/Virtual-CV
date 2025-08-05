@@ -1,53 +1,206 @@
+/* === Global Styles === */ 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(to right, #e6ecf0, #fdfbfb);
   color: #333;
+  scroll-behavior: smooth;
 }
 
+/* === Header with Background Image === */
 header {
-  background-color: #005a9c;
+  position: relative;
+  text-align: center;
   color: white;
-  padding: 2em 1em;
+  padding: 4em 1em;
+  background: url("assets/profile.jpg") center 20% / 100% auto no-repeat;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+header h1,
+header p,
+nav {
+  position: relative;
+  z-index: 1;
+  top: 250px; /* moved down */
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+}
+
+/* === Typing Animation for Subtitle === */
+.typing-text {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
   text-align: center;
 }
 
+.typing-text span {
+  display: inline;
+}
+
+.typing-text .cursor {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* === Navigation === */
+nav {
+  margin-top: 1em;
+}
+
 nav a {
-  margin: 0 10px;
-  color: #fff;
+  display: inline-block;
+  margin: 0 8px;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: bold;
   text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #800000; /* maroon instead of yellow */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* === Section Cards === */
 section {
-  padding: 2em;
+  padding: 3em 2em;
   max-width: 900px;
-  margin: auto;
-  background-color: white;
-  margin-bottom: 1em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 2em auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-  color: #005a9c;
+  color: #800000;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3em;
+  margin: 0px 0 1em;
 }
 
+/* === Lists === */
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: disc;
+  padding-left: 1.5em;
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
+/* === Project Buttons === */
+section ul a {
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 6px;
+  padding: 5px 10px;
+  background-color: #800000;
+  color: white;
+  font-size: 0.85em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+section ul a:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+}
+
+/* === CV Download Button === */
+.btn {
+  background: #800000;
+  color: white;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1em;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background: #a00000;
+  transform: scale(1.05);
+}
+
+/* === LinkedIn Button === */
+.linkedin-btn {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.linkedin-btn:hover {
+  background-color: #a00000;
+  transform: translateY(-2px);
+}
+
+/* === Footer === */
 footer {
   text-align: center;
   padding: 1em;
   background-color: #eaeaea;
+  font-size: 0.9em;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px auto;
+    width: max-content;
+  }
+
+  section {
+    padding: 2em 1em;
+  }
 }
